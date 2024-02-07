@@ -1,0 +1,9 @@
+Developers detail item page:
+https://developers.arcgis.com/layers/6bcbe76fdf0a4d75b41d512c7b339370/
+ArcGIS Online Items page:
+https://fleming.maps.arcgis.com/home/item.html?id=6bcbe76fdf0a4d75b41d512c7b339370
+Rest api:
+https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/tree_species/FeatureServer/0
+Itemid:
+6bcbe76fdf0a4d75b41d512c7b339370 
+
