@@ -25,8 +25,8 @@
      "esri/config",
       "esri/Map",
       "esri/views/MapView",
-      "esri/layers/TileLayer"
-    ], function (esriConfig,Map, MapView,TileLayer) {
+      "esri/layers/MapImageLayer"
+    ], function (esriConfig,Map, MapView,MapImageLayer) {
 
       esriConfig.apiKey = "AAPK6c4a52063e2f49ffabcef96fb48124adQjLJC9f9cp_MCQzpiONzinoR5BE6s2F-zck98USV2JFcrhf3Mken4y-JCavybDjI";
       const map = new Map({
@@ -42,9 +42,10 @@
           snapToZoom: false
         }
       });
-      let layer = new TileLayer({
+      let layer = new MapImageLayer({
         url: "https://tiles.arcgis.com/tiles/pMeXRvgWClLJZr3s/arcgis/rest/services/AQHydrologic_soil_groups/MapServer"
       });
+      map.add(layer);
 
     });
   </script>
