@@ -26,11 +26,7 @@
       "esri/Map",
       "esri/views/MapView",
       "esri/layers/FeatureLayer"
-    ], (FeatureLayer) => {
-      const layer = new FeatureLayer({
-        url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/WetlandAreas/FeatureServer"
-    })
-    }, function (esriConfig,Map, MapView) {
+    ], function (esriConfig,Map, MapView,FeatureLayer) {
 
       esriConfig.apiKey = "AAPK6c4a52063e2f49ffabcef96fb48124adQjLJC9f9cp_MCQzpiONzinoR5BE6s2F-zck98USV2JFcrhf3Mken4y-JCavybDjI";
       const map = new Map({
@@ -45,6 +41,9 @@
         constraints: {
           snapToZoom: false
         }
+      });
+      const layer = new FeatureLayer({
+        url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/WetlandAreas/FeatureServer"
       });
 
     });
