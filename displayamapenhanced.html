@@ -25,12 +25,12 @@
      "esri/config",
       "esri/Map",
       "esri/views/MapView",
-      "esri/layers/FeatureLayer"
-    ], function (esriConfig,Map, MapView,FeatureLayer) {
+      "esri/layers/TileLayer"
+    ], function (esriConfig,Map, MapView,TileLayer) {
 
       esriConfig.apiKey = "AAPK6c4a52063e2f49ffabcef96fb48124adQjLJC9f9cp_MCQzpiONzinoR5BE6s2F-zck98USV2JFcrhf3Mken4y-JCavybDjI";
       const map = new Map({
-        basemap: "arcgis-topographic" // Basemap layer
+        basemap: "osm/blueprint" // Basemap layer
       });
 
       const view = new MapView({
@@ -42,8 +42,8 @@
           snapToZoom: false
         }
       });
-      const layer = new FeatureLayer({
-        url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/WetlandAreas/FeatureServer"
+      let layer = new TileLayer({
+        url: "https://tiles.arcgis.com/tiles/pMeXRvgWClLJZr3s/arcgis/rest/services/AQHydrologic_soil_groups/MapServer"
       });
 
     });
