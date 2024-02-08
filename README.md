@@ -1,2 +1,2 @@
-# geoJSONAGOL
-GEOM99 Lab 2
+# geoJSONAGOL Website
+GEOM99 Lab 2 Activities!
