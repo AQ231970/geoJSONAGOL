@@ -18,14 +18,13 @@
 
   <script>
     require([
-     "esri/config",
+      "esri/config",
       "esri/Map",
       "esri/views/MapView",
       "esri/widgets/Locate",
       "esri/widgets/Track",
       "esri/Graphic"
     ], function (esriConfig,Map, MapView,Locate,Track,Graphic) {
-
       esriConfig.apiKey = "AAPK6c4a52063e2f49ffabcef96fb48124adQjLJC9f9cp_MCQzpiONzinoR5BE6s2F-zck98USV2JFcrhf3Mken4y-JCavybDjI";
       const map = new Map({
         basemap: "arcgis-navigation" // Basemap layer
@@ -40,8 +39,15 @@
           snapToZoom: false
         }
       });
-
-
+      const locate = new Locate({
+        view: view,
+        useHeadingEnabled: false,
+        goToOverride: function(view, options) {
+          options.target.scale = 1500;
+          return view.goTo(options.target);
+        }
+      });
+      view.ui.add(locate, "top-right");
       const track = new Track({
         view: view,
         graphic: new Graphic({
